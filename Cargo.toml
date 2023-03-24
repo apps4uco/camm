@@ -1,0 +1,28 @@
+[package]
+name = "camm"
+version = "0.1.0"
+edition = "2021"
+description = "WIP camm implementation"
+authors = ["Apps4u_co"]
+#homepage="http://apps4u.co/"
+documentation="https://docs.rs/camm"
+repository="https://github.com/apps4uco/camm"
+keywords = ["metadata","camera","sensors","geospatial"]
+categories = ["data-structures","encoding","parser-implementations"]
+license = "MIT OR Apache-2.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+default=["byteorder"]
+
+[dependencies]
+anyhow="1.0.70"
+num_enum = "0.5.11"
+#strum_macros = "0.24.3"
+#strum = { version = "0.24.1", features = ["derive"] }
+byteorder = { version = "1.4.3", optional = true }
+chrono = "0.4.24"
+tracing = { version = "0.1.37", features = ["max_level_debug", "release_max_level_info"] }
+tracing-subscriber = "0.3.16"
+tracing-error = "0.2.0"
